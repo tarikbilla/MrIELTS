@@ -19,7 +19,7 @@ const HomePage = () => {
       <main className="p-4 h-auto pt-10 main-content">
 
         <div className="container mx-auto">
-          <section class="hero-section ">
+          <section className="hero-section ">
               
           </section>
         </div>

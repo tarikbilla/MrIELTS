@@ -6,19 +6,19 @@ export default function DefaultFooter() {
   return (
     <Footer container>
       <Footer.Copyright
-        by="Flowbite™"
-        href="#"
+        by="Mr.IELTS"
+        href={'/'}
         year={2022}
       />
       <Footer.LinkGroup>
         <Footer.Link href="#">
-          About
+          About 
         </Footer.Link>
         <Footer.Link href="#">
-          Privacy Policy
+          Privacy Policy 
         </Footer.Link>
         <Footer.Link href="#">
-          Contact
+          Contact 
         </Footer.Link>
       </Footer.LinkGroup>
     </Footer>
