@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* Add your custom head content here */}
-          <link rel="icon" href="/images/logo.png" />
+          <link rel="icon" href={'/images/logo.png'} />
         </Head>
         <body>
           <Main />
