@@ -6,7 +6,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* Add your custom head content here */}
-          <link rel="icon" href={'/images/logo.png'} />
+          <link rel="icon" href={'/images/fav.png'} />
+          <title>Mr IELTS - Your Expert Companion for Success</title>
         </Head>
         <body>
           <Main />
