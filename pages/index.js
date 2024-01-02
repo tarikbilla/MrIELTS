@@ -4,17 +4,28 @@ import Head from "next/head";
 export default function HomePage() {
   return (
     <>
+      <Head>
+        <title>Mr IELTS - Your Expert Companion for Success</title>
+        <meta
+          name="keywords"
+          content="IELTS, English proficiency, test preparation"
+        />
+        <meta
+          name="description"
+          content="Welcome to MrIELTS, your expert guide to mastering the IELTS exam and certifying your English proficiency. Elevate your language skills, gain confidence, and open doors to new opportunities."
+        />
+      </Head>
       <div className="container mx-auto">
         <section className="hero-section mb-8">
           <div className="block my-8 md:grid grid-cols-2 gap-4">
             <div className="pb-8">
-              <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+              <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                 Certify Your English Mastery&nbsp;
-                <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
+                <span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
                   with MrIELTS
                 </span>
               </h1>
-              <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+              <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
                 Welcome to MrIELTS, your expert guide to mastering the IELTS
                 exam and certifying your English proficiency. Elevate your
                 language skills, gain confidence, and open doors to new
@@ -50,7 +61,7 @@ export default function HomePage() {
                 </span>
                 <div className="flex mt-4 space-x-3 md:mt-6">
                   <a
-                    href="#"
+                    href={'/online-test/listening'}
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   >
                     Start Test
@@ -86,7 +97,7 @@ export default function HomePage() {
                 </span>
                 <div className="flex mt-4 space-x-3 md:mt-6">
                   <a
-                    href="#"
+                    href={'/online-test/reading'}
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   >
                     Start Test
@@ -122,7 +133,7 @@ export default function HomePage() {
                 </span>
                 <div className="flex mt-4 space-x-3 md:mt-6">
                   <a
-                    href="#"
+                    href={'/online-test/writing'}
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   >
                     Start Test
@@ -158,7 +169,7 @@ export default function HomePage() {
                 </span>
                 <div className="flex mt-4 space-x-3 md:mt-6">
                   <a
-                    href="#"
+                    href={'/online-test/speaking'}
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   >
                     Start Test

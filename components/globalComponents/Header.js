@@ -24,7 +24,7 @@ export default function DefaultNavbar() {
 
                   {/* logo */}
                   <a href={'/'} className="flex mr-1">
-                    <img src="images/logo.svg" className="mr-1 h-6" alt="FlowBite Logo" />
+                    <img src={'/images/logo.svg'} className="mr-1 h-6" alt="FlowBite Logo" />
                   </a>
                   {/* search form here if need*/}
                 </div>
