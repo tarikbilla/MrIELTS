@@ -15,8 +15,9 @@ export default function HomePage() {
           content="Welcome to MrIELTS, your expert guide to mastering the IELTS exam and certifying your English proficiency. Elevate your language skills, gain confidence, and open doors to new opportunities."
         />
       </Head>
-      <div className="container mx-auto">
-        <section className="hero-section mb-8">
+
+      <div className="container-fluid mx-auto bg-white dark:bg-gray-800">
+        <section className="hero-section container mx-auto p-4 py-8 mb-8">
           <div className="block my-8 md:grid grid-cols-2 gap-4">
             <div className="pb-8">
               <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
@@ -39,6 +40,9 @@ export default function HomePage() {
               <img src="images/home/hero-banner.jpg" />
             </div>
           </div>
+        </section>
+
+        <section className="item-section container mx-auto p-4 py-8 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {/* item */}
             <div className="w-full max-w-sm p-2 mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -61,7 +65,7 @@ export default function HomePage() {
                 </span>
                 <div className="flex mt-4 space-x-3 md:mt-6">
                   <a
-                    href={'/online-test/listening'}
+                    href={"/online-test/listening"}
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   >
                     Start Test
@@ -97,7 +101,7 @@ export default function HomePage() {
                 </span>
                 <div className="flex mt-4 space-x-3 md:mt-6">
                   <a
-                    href={'/online-test/reading'}
+                    href={"/online-test/reading"}
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   >
                     Start Test
@@ -133,7 +137,7 @@ export default function HomePage() {
                 </span>
                 <div className="flex mt-4 space-x-3 md:mt-6">
                   <a
-                    href={'/online-test/writing'}
+                    href={"/online-test/writing"}
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   >
                     Start Test
@@ -169,7 +173,7 @@ export default function HomePage() {
                 </span>
                 <div className="flex mt-4 space-x-3 md:mt-6">
                   <a
-                    href={'/online-test/speaking'}
+                    href={"/online-test/speaking"}
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                   >
                     Start Test

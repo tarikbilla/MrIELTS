@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Header />
       <SidebarDrawer />
-      <main className="p-4 mt-14 h-auto py-8 main-content dark:bg-gray-800 dark:border-gray-700">
+      <main className="mt-14 h-auto main-content bg-slate-50 dark:bg-gray-800 dark:border-gray-700">
         <Component {...pageProps} />
       </main>
       <ButtonNavigation />
