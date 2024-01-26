@@ -31,9 +31,9 @@ export default function ReadingAnswerSheet(readingID) {
                   <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell>1</Table.Cell>
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                      {'Apple MacBook Pro 17"'}
+                      {'True'}
                     </Table.Cell>
-                    <Table.Cell>Laptop</Table.Cell>
+                    <Table.Cell>True</Table.Cell>
                     <Table.Cell>
                       <Badge color="success">Currect</Badge>
                     </Table.Cell>
@@ -41,9 +41,9 @@ export default function ReadingAnswerSheet(readingID) {
                   <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell>2</Table.Cell>
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                      Microsoft Surface Pro
+                      False
                     </Table.Cell>
-                    <Table.Cell>Laptop PC</Table.Cell>
+                    <Table.Cell>True</Table.Cell>
                     <Table.Cell>
                       <Badge color="failure">Wrong</Badge>
                     </Table.Cell>
@@ -51,7 +51,7 @@ export default function ReadingAnswerSheet(readingID) {
                   <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell>3</Table.Cell>
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                      Magic Mouse 2
+                      Accessories
                     </Table.Cell>
                     <Table.Cell>Accessories</Table.Cell>
                     <Table.Cell>
@@ -61,7 +61,7 @@ export default function ReadingAnswerSheet(readingID) {
                   <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell>4</Table.Cell>
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                      Google Pixel Phone
+                      Phone
                     </Table.Cell>
                     <Table.Cell>Phone</Table.Cell>
                     <Table.Cell>
@@ -71,7 +71,7 @@ export default function ReadingAnswerSheet(readingID) {
                   <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell>5</Table.Cell>
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                      Apple Watch 5
+                      Apple
                     </Table.Cell>
                     <Table.Cell>Wearables</Table.Cell>
                     <Table.Cell>

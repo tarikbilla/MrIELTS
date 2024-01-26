@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Breadcrumb, Button, Badge, Label, Radio, Table } from "flowbite-react";
 import { HiHome, HiCheck, HiClock } from "react-icons/hi";
 import ReadingAnswerSheet from "../../../components/pageComponents/readingTest/readingAnswerSheet";
+import ReadingHeaderRightTimerSidebar from "../../../components/pageComponents/readingTest/readingHeaderRightTimerSidebar";
 
 function ReadingTestPage() {
   const router = useRouter();
@@ -45,7 +46,7 @@ function ReadingTestPage() {
                 <Breadcrumb.Item>Test 2</Breadcrumb.Item>
               </Breadcrumb>
             </div>
-            <h1 className="text-4xl font-extrabold mb-6">
+            <h1 className="text-4xl font-extrabold mb-4">
               {readingTestData.title}
 
             </h1>
@@ -55,119 +56,7 @@ function ReadingTestPage() {
             </p>
           </div>
 
-          <div className="sm:w-80 header-side">
-            <div>
-              <Badge size="sm" icon={HiClock} className="px-4 text-center">
-                Duration：00:14:45
-              </Badge>
-            </div>
-
-            <div className="flex items-center w-full">
-              <div className="w-full">
-                <div className="flex items-center justify-between mx-auto m-4 mb-1">
-                  <button
-                    data-tooltip-target="tooltip-microphone"
-                    type="button"
-                    className="p-2.5 group bg-gray-100 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:bg-gray-600 dark:hover:bg-gray-800"
-                  >
-                    <svg
-                      className="w-4 h-4 text-gray-800 dark:text-white"
-                      aria-hidden="TRUE"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 10 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M0 .8C0 .358.32 0 .714 0h1.429c.394 0 .714.358.714.8v14.4c0 .442-.32.8-.714.8H.714a.678.678 0 0 1-.505-.234A.851.851 0 0 1 0 15.2V.8Zm7.143 0c0-.442.32-.8.714-.8h1.429c.19 0 .37.084.505.234.134.15.209.354.209.566v14.4c0 .442-.32.8-.714.8H7.857c-.394 0-.714-.358-.714-.8V.8Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="sr-only">Pause Time</span>
-                  </button>
-                  <div
-                    id="tooltip-microphone"
-                    role="tooltip"
-                    className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-                  >
-                    Pause Time
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-
-                  <button
-                    data-tooltip-target="tooltip-start"
-                    type="button"
-                    className="inline-flex items-center justify-center p-2.5 mx-2 font-medium bg-blue-600 rounded-full hover:bg-blue-700 group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
-                  >
-                    <svg
-                      className="w-3 h-3 text-white dark:text-white"
-                      aria-hidden="TRUE"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 14 16"
-                    >
-                      <path d="M0 .984v14.032a1 1 0 0 0 1.506.845l12.006-7.016a.974.974 0 0 0 0-1.69L1.506.139A1 1 0 0 0 0 .984Z" />
-                    </svg>
-                    <span className="sr-only">Start Time</span>
-                  </button>
-                  <div
-                    id="tooltip-start"
-                    role="tooltip"
-                    className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-                  >
-                    Start Time
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-
-                  <button
-                    data-tooltip-target="tooltip-restart"
-                    type="button"
-                    className="p-2.5 group bg-gray-100 rounded-full hover:bg-gray-200 me-4 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:bg-gray-600 dark:hover:bg-gray-800"
-                  >
-                    <svg
-                      className="w-4 h-4 text-gray-500 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white"
-                      aria-hidden="TRUE"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 18 20"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M16 1v5h-5M2 19v-5h5m10-4a8 8 0 0 1-14.947 3.97M1 10a8 8 0 0 1 14.947-3.97"
-                      />
-                    </svg>
-                    <span className="sr-only">Restart</span>
-                  </button>
-                  <div
-                    id="tooltip-restart"
-                    role="tooltip"
-                    className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-                  >
-                    Restart
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between space-x-2 rtl:space-x-reverse">
-                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    14:45
-                  </span>
-                  <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-800">
-                    <div
-                      className="bg-blue-600 h-1.5 rounded-full"
-                      style={{ width: "65%" }}
-                    ></div>
-                  </div>
-                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    20:00
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>{/*end sidebar*/}
+          <ReadingHeaderRightTimerSidebar />{/*end sidebar*/}
         </section>
 
         <section className="block sm:flex">
@@ -382,20 +271,20 @@ function ReadingTestPage() {
                   </legend>
                   <div className="flex items-center gap-2">
                     <Radio
-                      id="TRUE"
-                      name="countries"
+                      id="TRUEq1"
+                      name="q1"
                       value="TRUE"
                       defaultChecked
                     />
-                    <Label htmlFor="TRUE">TRUE</Label>
+                    <Label htmlFor="TRUEq1">TRUE</Label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Radio id="FALSE" name="countries" value="FALSE" />
-                    <Label htmlFor="FALSE">FALSE</Label>
+                    <Radio id="FALSEq1" name="q1" value="FALSE" />
+                    <Label htmlFor="FALSEq1">FALSE</Label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Radio id="NOTGIVEN" name="countries" value="NOTGIVEN" />
-                    <Label htmlFor="NOTGIVEN">NOT GIVEN</Label>
+                    <Radio id="NOTGIVENq1" name="q1" value="NOTGIVEN" />
+                    <Label htmlFor="NOTGIVENq1">NOT GIVEN</Label>
                   </div>
                 </fieldset>
               </div>
@@ -409,20 +298,20 @@ function ReadingTestPage() {
                   </legend>
                   <div className="flex items-center gap-2">
                     <Radio
-                      id="TRUE"
-                      name="countries"
+                      id="TRUEq2"
+                      name="q2"
                       value="TRUE"
                       defaultChecked
                     />
-                    <Label htmlFor="TRUE">TRUE</Label>
+                    <Label htmlFor="TRUEq2">TRUE</Label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Radio id="FALSE" name="countries" value="FALSE" />
-                    <Label htmlFor="FALSE">FALSE</Label>
+                    <Radio id="FALSEq2" name="q2" value="FALSE" />
+                    <Label htmlFor="FALSEq2">FALSE</Label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Radio id="NOTGIVEN" name="countries" value="NOTGIVEN" />
-                    <Label htmlFor="NOTGIVEN">NOT GIVEN</Label>
+                    <Radio id="NOTGIVENq2" name="q2" value="NOTGIVEN" />
+                    <Label htmlFor="NOTGIVENq2">NOT GIVEN</Label>
                   </div>
                 </fieldset>
               </div>
@@ -436,20 +325,20 @@ function ReadingTestPage() {
                   </legend>
                   <div className="flex items-center gap-2">
                     <Radio
-                      id="TRUE"
-                      name="countries"
+                      id="TRUEq3"
+                      name="q3"
                       value="TRUE"
                       defaultChecked
                     />
-                    <Label htmlFor="TRUE">TRUE</Label>
+                    <Label htmlFor="TRUEq3">TRUE</Label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Radio id="FALSE" name="countries" value="FALSE" />
-                    <Label htmlFor="FALSE">FALSE</Label>
+                    <Radio id="FALSEq3" name="q3" value="FALSE" />
+                    <Label htmlFor="FALSEq3">FALSE</Label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Radio id="NOTGIVEN" name="countries" value="NOTGIVEN" />
-                    <Label htmlFor="NOTGIVEN">NOT GIVEN</Label>
+                    <Radio id="NOTGIVENq3" name="q3" value="NOTGIVEN" />
+                    <Label htmlFor="NOTGIVENq3">NOT GIVEN</Label>
                   </div>
                 </fieldset>
               </div>
@@ -463,20 +352,20 @@ function ReadingTestPage() {
                   </legend>
                   <div className="flex items-center gap-2">
                     <Radio
-                      id="TRUE"
-                      name="countries"
+                      id="TRUEq4"
+                      name="q4"
                       value="TRUE"
                       defaultChecked
                     />
-                    <Label htmlFor="TRUE">TRUE</Label>
+                    <Label htmlFor="TRUEq4">TRUE</Label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Radio id="FALSE" name="countries" value="FALSE" />
-                    <Label htmlFor="FALSE">FALSE</Label>
+                    <Radio id="FALSEq4" name="q4" value="FALSE" />
+                    <Label htmlFor="FALSEq4">FALSE</Label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Radio id="NOTGIVEN" name="countries" value="NOTGIVEN" />
-                    <Label htmlFor="NOTGIVEN">NOT GIVEN</Label>
+                    <Radio id="NOTGIVENq4" name="q4" value="NOTGIVEN" />
+                    <Label htmlFor="NOTGIVENq4">NOT GIVEN</Label>
                   </div>
                 </fieldset>
               </div>
@@ -494,14 +383,14 @@ function ReadingTestPage() {
                 <input
                   type="text"
                   placeholder="Your Answer here"
-                  className="text-center border-b-2 border-dashed border-indigo-600"
+                  className="text-center border-b-2 border-dashed border-indigo-600 outline-none"
                 />{" "}
                 covering many of the Efate sites did not come from that area.
                 Then examinations carried out on the 6{" "}
                 <input
                   type="text"
                   placeholder="Your Answer here"
-                  className="text-center border-b-2 border-dashed border-indigo-600"
+                  className="text-center border-b-2 border-dashed border-indigo-600 outline-none"
                 />{" "}
                 discovered at Efate site reveal that not everyone buried there
                 was a native living in the area. In fact, DNA could identify the
@@ -509,7 +398,7 @@ function ReadingTestPage() {
                 <input
                   type="text"
                   placeholder="Your Answer here"
-                  className="text-center border-b-2 border-dashed border-indigo-600"
+                  className="text-center border-b-2 border-dashed border-indigo-600 outline-none"
                 />{" "}
                 present-days.
               </p>
@@ -526,7 +415,7 @@ function ReadingTestPage() {
                 <input
                   type="text"
                   placeholder="Your Answer here"
-                  className="text-center border-b-2 border-dashed border-indigo-600"
+                  className="text-center border-b-2 border-dashed border-indigo-600 outline-none"
                 />
                 What did the Lapita travel in when they crossed the oceans?
               </p>
@@ -535,7 +424,7 @@ function ReadingTestPage() {
                 <input
                   type="text"
                   placeholder="Your Answer here"
-                  className="text-center border-b-2 border-dashed border-indigo-600"
+                  className="text-center border-b-2 border-dashed border-indigo-600 outline-none"
                 />
                 In Irwins’s view, what would the Lapita have relied on to bring
                 them fast back to the base?
@@ -545,7 +434,7 @@ function ReadingTestPage() {
                 <input
                   type="text"
                   placeholder="Your Answer here"
-                  className="text-center border-b-2 border-dashed border-indigo-600"
+                  className="text-center border-b-2 border-dashed border-indigo-600 outline-none"
                 />
                 Which sea creatures would have been an indication to the Lapita
                 of where to find land?

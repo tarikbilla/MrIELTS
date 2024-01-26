@@ -1,3 +1,128 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul,
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the base font size and line height */
+html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Apply a box-sizing border-box to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Apply default styles to body */
+body {
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #333;
+    /* Adjust the color as needed */
+    background-color: #fff;
+    /* Adjust the background color as needed */
+}
+
+/* Apply default styles to headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* Apply default styles to paragraphs */
+p {
+    margin-bottom: 1em;
+}
+
+/* Apply default styles to links */
+a {
+    color: #007bff;
+    /* Adjust the link color as needed */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Apply default styles to lists */
+ul,
+ol {
+    margin-bottom: 1em;
+}
+
+/* Apply default styles to list items */
+li {
+    margin-bottom: 0.25em;
+}
+
+/* Apply default styles to blockquotes */
+blockquote {
+    margin: 0 0 1em;
+    padding: 0.5em 1em;
+    background-color: #f8f9fa;
+    /* Adjust the background color as needed */
+    border-left: 4px solid #007bff;
+    /* Adjust the border color as needed */
+}
+
+/* Apply default styles to forms */
+form {
+    margin-bottom: 1em;
+}
+
+/* Apply default styles to input elements */
+input,
+button,
+select,
+textarea {
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+/* Apply default styles to buttons */
+button {
+    cursor: pointer;
+}
+
+/* Apply default styles to images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* ==============================
+===========custom css here=======
+============================== */
+
+
+

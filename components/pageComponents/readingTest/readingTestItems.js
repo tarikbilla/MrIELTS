@@ -13,7 +13,7 @@ function ReadingTestItem({ levelId, testId }) {
         {[1, 2, 3, 4].map((partNumber) => (
           <li key={partNumber}>
             <a
-              href={getPartLink(partNumber)}
+              href={`/online-test/reading/${partNumber}`}
               className="flex items-center p-2 text-base shadow text-gray-900 font-medium rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow-md dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <svg
