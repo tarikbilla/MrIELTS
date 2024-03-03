@@ -4,17 +4,17 @@ function ReadingTestItem({ levelId, testId }) {
   const getPartLink = (partNumber) => `/online-test/reading/single`; // Replace with your actual link logic
 
   return (
-    <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-4 dark:bg-gray-800 dark:border-gray-700">
       <h4 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
         Test-{testId}
       </h4>
 
-      <ul className="my-4 space-y-3">
+      <ul className="my-4 space-y-4">
         {[1, 2, 3, 4].map((partNumber) => (
           <li key={partNumber}>
             <a
               href={`/online-test/reading/${partNumber}`}
-              className="flex items-center p-2 text-base shadow text-gray-900 font-medium rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow-md dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+              className="flex items-center px-2 py-3 m-0 text-lg shadow border text-gray-900 font-bold rounded-lg bg-gray-100 hover:bg-gray-50 group hover:shadow-md dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <svg
                 className="w-5 h-5 text-gray-800 dark:text-white"
