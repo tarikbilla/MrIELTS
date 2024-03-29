@@ -3,7 +3,7 @@ import Image from "next/image";
 import HeaderApps from "./header/headerApps";
 import HeaderNotifications from "./header/headerNotifications";
 import HeaderSearchForm from "./header/headerSearch";
-import Usermenu from "./header/usermenu";
+import Usermenu from "./header/userMenu";
 
 export default function DefaultNavbar() {
   return (
@@ -24,7 +24,7 @@ export default function DefaultNavbar() {
 
                   {/* logo */}
                   <a href={'/'} className="flex mr-1">
-                    <img src={'/images/logo.svg'} className="mr-1 h-6" alt="FlowBite Logo" />
+                    <Image height={24} width={120} src={'/images/logo.svg'} className="mr-1 h-6" alt="FlowBite Logo" />
                   </a>
                   {/* search form here if need*/}
                 </div>
