@@ -25,7 +25,20 @@ const roboto = Roboto({
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  if (router.pathname.startsWith("/ielts-admin")) {
+  if (router.pathname.startsWith("/ielts-admin/login")) {
+    return (
+      <>
+        <div className={`${roboto.className} antialiased bg-gray-50 dark:bg-gray-900 h-screen`}>
+          <div className="p-4 h-auto pt-20">
+            <AdminContextProvider>
+              <Component {...pageProps} />
+            </AdminContextProvider>
+          </div>
+        </div>
+      </>
+    );
+    
+  } else if (router.pathname.startsWith("/ielts-admin")) {
     return (
       <>
         <div

@@ -1,4 +1,8 @@
 export default function IeltsAdmin(){
 
-    return "";
+    return (
+        <>
+        Welcome
+        </>
+    );
 }

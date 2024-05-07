@@ -9,35 +9,35 @@ const apiUrl = configData.getApiUrl();
 
 export default function DeleteStore() {
   const router = useRouter();
-  const { userId } = router.query;
+  const { postCatId } = router.query;
 
   const { successToast, failedToast, warningToast } = useToast();
 
   useEffect(() => {
-    // Check if userId is available
-    if (userId) {
+    // Check if postCatId is available
+    if (postCatId) {
       // You can perform your deletion logic here, e.g., send a DELETE request to your API
-      fetch(`${apiUrl}/api/users/${userId}`, {
+      fetch(`${apiUrl}/api/post-categories/${postCatId}`, {
         method: 'DELETE',
       })
         .then((response) => response.json())
         .then((data) => {
-          successToast('Store deleted successfully');
+          successToast('Category  deleted successfully');
           // Handle the deletion success and redirect
-          router.push('/apadmin/users'); // Redirect to the users list
+          router.push('/ielts-admin/postcategories'); // Redirect to the stores list
         })
         .catch((error) => {
-          console.error('Error deleting store:', error);
+          console.error('Error deleting category :', error);
           // Handle the deletion failure
           // You might want to display an error message or take other actions
         });
     }
-  }, [router, userId, successToast]);
+  }, [postCatId, router, successToast]);
 
   // You can also display a loading message or other content while the deletion is in progress
   return (
     <div>
-      <p>Deleting store...</p>
+      <p>Deleting category s...</p>
     </div>
   );
 }

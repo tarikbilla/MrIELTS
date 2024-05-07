@@ -5,14 +5,13 @@ import $ from 'jquery';
 import 'datatables.net-bs5';
 import PopUpModal from '../../../components/dashboard/global/confirmationModal';
 import { useToast } from '../../../contexts/AdminContextProvider';
-import Image from "next/image";
 // include config file
 const configData = require('../../../config');
 const apiUrl = configData.getApiUrl();
 
 
 
-function Users() {
+function PostCategories() {
     const [openModal, setOpenModal] = useState();
     const props = { openModal, setOpenModal };
     const [data, setData] = useState([]);
@@ -23,7 +22,7 @@ function Users() {
 
 
     useEffect(() => {
-        fetch(`${apiUrl}/api/users`)
+        fetch(`${apiUrl}/api/post-categories`)
             .then((response) => response.json())
             .then((data) => {
                 setData(data);
@@ -47,37 +46,34 @@ function Users() {
 
     return (
         <>
-            <h2 className="text-4xl font-extrabold dark:text-white my-8">All Users</h2>
-            <div className='relative overflow-x-auto usersdatatable dateTable'>
+            <h2 className="text-4xl font-extrabold dark:text-white my-8">All Category Data</h2>
+            <a href={'/ielts-admin/postcategories/new'} className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-md px-5 py-3 text-center mr-2 mb-4 inline-block'>Add New Category</a>
+            <div className='relative overflow-x-auto cattypetable dateTable'>
                 <table className="table table-striped table-bordered w-full display" ref={tableRef}>
                     <thead>
                         <tr className="p-4">
                             <th>ID</th>
-                            <th>Avatar</th>
-                            <th>Username</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Joining Date</th>
+                            <th>Categories Name</th>
+                            <th>Categories Description</th>
+                            <th>Categories Slug</th>
+                            <th>Posts</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {Array.isArray(data) && data.length > 0 ? (
                             data.map((row) => (
-                                <tr className="py-4" key={row.usre_id}>
-                                    <td>{row.user_id}</td>
+                                <tr className="py-4" key={row.post_cat_id}>
+                                    <td>{row.post_cat_id}</td>
+                                    <td>{row.post_cat_name}</td>
+                                    <td>{row.post_cat_description.substring(0, 40) + '...'}</td>
+                                    <td>{row.post_cat_slug }</td>
+                                    <td>{0}</td>
                                     <td>
-                                        {(row.user_avatar != null) ? <Image height="60" width="60" src={`${apiUrl}/uploads/users/${row.user_avatar}`} alt="Usre Image" className='rounded' /> : 'No Image'}
-                                    </td>
-                                    <td>{row.username}</td>
-                                    <td>{row.email}</td>
-                                    <td>{row.user_role}</td>
-                                    <td>{row.user_registered_date}</td>
-                                    <td>
-                                        <a className="me-2 text-blue-600" href={`/apadmin/users/edit/${row.user_id}`}>Edit</a>
+                                        <a className="me-2 text-blue-600" href={`/ielts-admin/postcategories/edit/${row.post_cat_id}`}>Edit</a>
                                         <PopUpModal
-                                            message="Are you sure you want to delete this usre?"
-                                            confirmURL={`/apadmin/users/delete/${row.user_id}`}
+                                            message="Are you sure you want to delete this post category?"
+                                            confirmURL={`/ielts-admin/postcategories/delete/${row.post_cat_id}`}
                                         />
                                     </td>
                                 </tr>
@@ -95,4 +91,4 @@ function Users() {
     );
 }
 
-export default Users;
+export default PostCategories;

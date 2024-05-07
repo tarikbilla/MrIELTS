@@ -14,7 +14,7 @@ export const UserContextProvider = ({ children }) => {
         const token = localStorage.getItem('token');
 
         if (token) {
-          const response = await fetch(`${apiUrl}/api/users/me`, {
+          const response = await fetch(`${apiUrl}/api/admin-users/me`, {
             method: 'GET',
             headers: {
               Authorization: `Bearer ${token}`,

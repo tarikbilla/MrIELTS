@@ -9,14 +9,14 @@ import Link from 'next/link';
 export default function AdminHeaderComponent() {
   const router = useRouter();
   const [user, setUser] = useState(null);
-  const [loading, setLoding] = useState(false);
+  const [loading, setLoding] = useState(true);
 
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
         const token = localStorage.getItem('token');
 
-        const response = await fetch(`${apiUrl}/api/users/me`, {
+        const response = await fetch(`${apiUrl}/api/admin-users/me`, {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${token}`,
@@ -39,12 +39,12 @@ export default function AdminHeaderComponent() {
 
     const token = localStorage.getItem('token');
 
-    // if (!token) {
-    //   router.push('/ielts-admin/login');
-    // } else {
-    //   setLoding(false);
-    //   fetchUserInfo();
-    // }
+    if (!token) {
+      router.push('/ielts-admin/login');
+    } else {
+      setLoding(false);
+      fetchUserInfo();
+    }
   }, [router]);
 
   if (loading) {
