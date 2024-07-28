@@ -3,12 +3,17 @@ import Chart from 'chart.js/auto';
 
 const WritingDoughnutChart = ({ score }) => {
   const chartContainer = useRef(null);
+  const chartInstance = useRef(null);
 
   useEffect(() => {
     if (chartContainer.current) {
       const ctx = chartContainer.current.getContext('2d');
 
-      new Chart(ctx, {
+      if (chartInstance.current) {
+        chartInstance.current.destroy();
+      }
+
+      chartInstance.current = new Chart(ctx, {
         type: 'doughnut',
         data: {
           labels: ['Score', 'Remaining'],
@@ -24,13 +29,13 @@ const WritingDoughnutChart = ({ score }) => {
           cutout: '80%', // Adjust the cutout percentage to control the size of the center text
           plugins: {
             title: {
-                display: true,
-                text: `${score}/10`, // Display the score and total score
-                color: '#000', // Set the color of the title
-                font: {
-                  size: 20, // Adjust the font size of the title
-                },
+              display: true,
+              text: `${score}/10`, // Display the score and total score
+              color: '#000', // Set the color of the title
+              font: {
+                size: 20, // Adjust the font size of the title
               },
+            },
             legend: {
               display: true,
             },
@@ -40,6 +45,12 @@ const WritingDoughnutChart = ({ score }) => {
         },
       });
     }
+
+    return () => {
+      if (chartInstance.current) {
+        chartInstance.current.destroy();
+      }
+    };
   }, [score]);
 
   return <canvas ref={chartContainer} width="100%" height="100%"></canvas>;
